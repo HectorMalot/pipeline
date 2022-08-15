@@ -14,7 +14,7 @@ func Collect[Item any](ctx context.Context, maxSize int, maxDuration time.Durati
 	out := make(chan []Item)
 	go func() {
 		for {
-			is, open := collect[Item](ctx, maxSize, maxDuration, in)
+			is, open := collect(ctx, maxSize, maxDuration, in)
 			if is != nil {
 				out <- is
 			}

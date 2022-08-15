@@ -123,7 +123,7 @@ func TestMerge(t *testing.T) {
 
 			// Merge all of their error channels together
 			var errs []error
-			merged := Merge[error](errChans...)
+			merged := Merge(errChans...)
 
 			// Create the timeout
 			timeout := time.After(maxTestDuration)
