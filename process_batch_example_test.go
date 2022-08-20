@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/deliveryhero/pipeline/v2"
+	"github.com/hectormalot/pipeline/v2"
 )
 
 func ExampleProcessBatch() {
