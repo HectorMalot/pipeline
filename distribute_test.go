@@ -14,12 +14,8 @@ func TestDistributor(t *testing.T) {
 
 	p := Emit(ints...)
 
-	d := NewDistributor(p)
-	p1 := d.NewChan()
-	p2 := d.NewChan()
-	p3 := d.NewChan()
-
-	out := Merge(p1, p2, p3)
+	d := Distribute(p, 3)
+	out := Merge(d...)
 
 	var result []int
 	for r := range out {
